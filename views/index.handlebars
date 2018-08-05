@@ -1,0 +1,33 @@
+{{!-- a burgers.js file was added to assets folder to retrieve data from front end. This
+This broke app => will render w/o //assets/js/burgers.js => will not update in DB --}}
+<h1>EAT-da-BURGER</h1>
+
+<h2>To Eat</h2>
+
+{{!-- Displaying each burger => does not display in table format --}}
+{{!-- Style does not connect --}}
+<ul>
+  {{#each burgers}}
+  <li>
+    {{burger_name}}  {{> burgers/burger-block }}
+  </li>
+
+  {{/each}}
+</ul>
+
+<h2>Or Not to Eat</h2>
+{{!-- Cimage does not display when conencted to server--}}
+<img src="./public/img/burger.png" height ="42" width="42">
+
+<h2>Add Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="burg">Burger Name:</label>
+    <input type="text" id="burg" name="burger_name">
+  </div>
+
+  
+
+  <button type="submit">Submit Burger</button>
+</form>
